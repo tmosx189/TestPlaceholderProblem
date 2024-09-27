@@ -7,6 +7,7 @@
         public MainPage(MainPageViewModel vm)
         {
             InitializeComponent();
+            // Bind the ViewModel
             BindingContext = vm;
         }
     }
