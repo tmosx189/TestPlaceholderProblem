@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="TestPlaceholderProblem.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+    xmlns:dxdf="clr-namespace:DevExpress.Maui.DataForm;assembly=DevExpress.Maui.Editors"
+    xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Label
+                SemanticProperties.HeadingLevel="Level1"
+                Style="{StaticResource Headline}"
+                Text="Please choose product" />
+
+            <dxe:ComboBoxEdit
+                x:Name="SelectedProductField"
+                DisplayMember="DisplayedProduct"
+                ErrorText="Error text"
+                FilterComparisonType="CurrentCultureIgnoreCase"
+                FilterCondition="Contains"
+                IsEnabled="True"
+                IsFilterEnabled="True"
+                ItemsSource="{Binding Products}"
+                KeepFocusOnItemSelection="False"
+                LabelText="Product"
+                PickerShowMode="DropDown"
+                PlaceholderText="Choose product"
+                ReturnType="Next" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
