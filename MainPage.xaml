@@ -23,12 +23,14 @@
                 FilterCondition="Contains"
                 IsEnabled="True"
                 IsFilterEnabled="True"
+                IsLabelFloating="False"
                 ItemsSource="{Binding Products}"
                 KeepFocusOnItemSelection="False"
                 LabelText="Product"
                 PickerShowMode="DropDown"
                 PlaceholderText="Choose product"
                 ReturnType="Next" />
+
 
         </VerticalStackLayout>
     </ScrollView>
